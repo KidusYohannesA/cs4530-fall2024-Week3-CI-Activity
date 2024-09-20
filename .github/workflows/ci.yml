@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
   
 jobs:
-    test:
+  test:
     runs-on: ubuntu-latest
     steps:
     - name: Install OS dependencies
