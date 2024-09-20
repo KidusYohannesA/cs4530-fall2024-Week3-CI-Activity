@@ -21,6 +21,10 @@ jobs:
       run: |
         sudo apt update
         sudo apt upgrade
+    - name: Change directory back
+      run: cd ../
+    - name: Change directory back again
+      run: cd ../
     - name: Install dependencies
       run: npm install
     - name: Build the Project
