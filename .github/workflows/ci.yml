@@ -1,0 +1,26 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+  
+jobs:
+    test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install OS dependencies
+      run: |
+        sudo apt update
+        sudo apt upgrade
+    - name: Install dependencies
+      run: npm install
+    - name: Build the Project
+      run: npm run build
+    - name: Run tests
+      run: npm run test
+  
